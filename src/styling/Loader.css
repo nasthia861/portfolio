@@ -1,0 +1,46 @@
+
+.loader {
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #d8bfd8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ #large-tri {
+  opacity: 0;
+  animation: dropIn 5s ease forwards;
+  animation-delay: 1s;
+}
+
+#medium-tri {
+  opacity: 0;
+  animation: dropIn 5s ease forwards;
+  animation-delay: 2s;
+}
+
+#small-tri {
+  opacity: 0;
+  animation: dropIn 3s ease forwards;
+  animation-delay: 2s;
+}
+
+@keyframes dropIn {
+  20%{
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  30%, 80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+  }
+
+}

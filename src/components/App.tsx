@@ -1,11 +1,22 @@
-import React from 'react';
+import {useEffect, useState} from 'react';
 import '../styling/App.css';
 import Header from './Header';
+import Loader from './Loader';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    const fakeDataFetch = () => {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 5500);
+    }
+
+    fakeDataFetch();
+  }, [])
   return (
     <div className="App">
-      <Header></Header>
+      {isLoading ? <Loader></Loader> : <Header></Header>}
     </div>
   );
 }
