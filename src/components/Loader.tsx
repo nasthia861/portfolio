@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styling/Loader.css";
+
 const Loader = () => {
+  const [showMessage, setShowMessage] = React.useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowMessage(true);
+    }, 6000); // Show message after 5 seconds
+
+    return () => clearTimeout(timer); // Cleanup the timer on unmount
+  }, []);
+  const handleScroll = () => {
+    const layoutSection = document.getElementById("main-layout");
+    layoutSection?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+
   return (
     <div className="loader">
+      {!showMessage ? (
         <svg
           width="1000"
           height="900"
@@ -28,6 +46,14 @@ const Loader = () => {
             />
           </g>
         </svg>
+      ) : (
+        <div className="welcome-container">
+          <h1>Welcome to My Portfolio!</h1>
+          <button className="see-work-btn" onClick={handleScroll}>
+            See My Work
+          </button>
+        </div>
+      )}
     </div>
   );
 };
