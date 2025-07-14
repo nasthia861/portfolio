@@ -1,17 +1,24 @@
 import React from "react";
 import Header from "./Header";
-import Home from "./pages/Home";
 import Loader from "./components/Loader";
+import Tech from "./pages/Tech";
+import Project from "./pages/Projects";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 const Layout: React.FC = () => {
   return (
-    <section id="main-layout">
+    <div className="App">
       <Header />
-      <main>
-        <Home />
-        {/* Other sections */}
-      </main>
-    </section>
+      <section id="main-layout" className="main-layout">
+        <main>
+          <About />
+          <Tech />
+          <Project />
+          <Contact />
+        </main>
+      </section>
+    </div>
   );
 };
 

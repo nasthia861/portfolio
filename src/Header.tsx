@@ -15,11 +15,11 @@ const Header: React.FC = () => {
           <Button fillMode="flat" onClick={() => scrollTo("about")}>
             About
           </Button>
-          <Button fillMode="flat" onClick={() => scrollTo("photos")}>
-            Photos
-          </Button>
           <Button fillMode="flat" onClick={() => scrollTo("tech")}>
             Tech Stack
+          </Button>
+          <Button fillMode="flat" onClick={() => scrollTo("projects")}>
+            Projects
           </Button>
           <Button fillMode="flat" onClick={() => scrollTo("contact")}>
             Contact

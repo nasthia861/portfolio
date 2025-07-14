@@ -1,6 +1,5 @@
 .header-bar {
   background-color: #fbeaff;
-  position: sticky;
   top: 0;
   z-index: 1000;
   padding: 0.5rem 1rem;
@@ -21,4 +20,22 @@ header {
   background: #f8eafa;
   padding: 10px 20px;
 }
+.about-section {
+  scroll-margin-top: 64px;
+}
+.tech-section {
+  scroll-margin-top: 64px;
+}
+.projects-section {
+  scroll-margin-top: 64px;
+}
+.contact-section {
+  scroll-margin-top: 64px;
+}
+.main-layout {
+  padding: 1rem;
+  scroll-margin-top: 64px;
+  height: 100%;
+    background-color: #fbeaff;
 
+}
